@@ -1,0 +1,53 @@
+
+
+.encabezado{
+    
+    margin: 50px;
+    text-align: center;
+}
+
+#iniciar{
+    margin: 20px;
+}
+
+.login{
+    background-color:whitesmoke;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+#mensaje1{
+    margin-left: 90%;
+ }
+
+ #saludo{
+     text-align: center;
+ }
+
+ .contenedor{
+    padding: 10px;
+    vertical-align: middle;
+    margin: auto;
+    width: 80%;
+}
+
+.menu{
+    display: inline-block;
+    width: 30%;
+}
+
+
+#texto{
+    background-color: whitesmoke;
+     padding: 10px;;
+     text-align: justify;
+     line-height: 1;
+     display: inline-block;
+     width: 60%;
+ }
+
+ .imagen{
+     width: 650px;
+     height: 250px;
+ }
