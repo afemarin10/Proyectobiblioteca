@@ -9,6 +9,6 @@ function Inciar() {
   } else {
     sessionStorage["Inicio"]="No";
   }
-  location.href = "pagina1.html";
+  location.href = "index.html";
  }
 
