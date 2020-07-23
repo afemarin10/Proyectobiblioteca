@@ -12,11 +12,14 @@ body {
 }
 
 .login {
-
+    padding: 10px;
+    padding-left: 20px;
     background-color: whitesmoke;
     text-align: center;
-    margin-left: 500px;
+    margin-left: 450px;
     margin-right: 500px;
+    height: 400px;
+    width: 500px;
 }
 
 #mensaje1 {
@@ -43,7 +46,7 @@ body {
 #texto {
     background-color: whitesmoke;
     padding: 10px;
-    ;
+    
     text-align: justify;
     line-height: 1;
     display: inline-block;
@@ -132,5 +135,17 @@ li {
     padding: 0;
     display: inline-block;
     width: 50%;
+
+}
+button{
+    
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
 
 }
