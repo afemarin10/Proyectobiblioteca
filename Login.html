@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="css/estilos.css" />
-   
-  </head>
-  <body background="imagenes/U_login.jpg">
-    <nav class="nav-main">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+
+</head>
+
+<body background="imagenes/U_login.jpg">
+  <!-- <nav class="nav-main">
       <img src="https://sibcolombia.net/wp-content/uploads/2016/05/Logo-u-amazonia.png" alt="" class="fondo_login">
       <ul class="nav-menu">
               <li>
@@ -27,22 +29,33 @@
                   <a href="Login.html">Iniciar Sesión</a>
               </li>
           </ul>
-  </nav>
-    
-    <div class="login">
-      <fieldset>
-        <div class="encabezado">
-          <h1>Sistema Misional Chairá</h1>
-        </div>
-        <form name="validar">
-          <h2>Usuario</h2>
-          <input type="text" name="txtusuario" id="txtusuario" /><br />
-          <h2>Contraseña</h2>
-          <input type="password" name="txtcontraseña" id="txtcontraseña" /><br />
-          <button type="button"  id="iniciar" onclick="Inciar()">Ingresar</button>
-        </form>       
-      </fieldset>  
-    </div>    
-    <script src="js/funciones.js"></script>
-  </body>
+     </nav> -->
+
+  <div class="login">
+    <fieldset>
+      <div class="encabezado">
+        <h1>Sistema Misional Chairá: Division Bibliotecaria UDLA</h1>
+       
+      </div>
+      <form name="validar">
+        <h2>Usuario</h2>
+        <input type="text" name="txtusuario" id="txtusuario" placeholder="Ingresar Usuario"/><br />
+        <h2>Contraseña</h2>
+        <input type="password" name="txtcontraseña" id="txtcontraseña" placeholder="Ingresar Contraseña"/><br />
+        <button type="button" id="iniciar" onclick="Inciar()">Ingresar</button>
+      </form>
+      <div class="olvido">
+        <a href="recuperar.html">¿Olvidó su nombre de usuario? </a>
+        <br>
+        <a href="recuperar.html">¿Olvidó su contraseña?</a>
+        <br>
+        <a href="registrarse.html">¿Registrarse? </a>
+        <br>
+        <a href="ayuda.html">¿Necesitas ayuda?</a>
+      </div>
+    </fieldset>
+  </div>
+  <script src="js/funciones.js"></script>
+</body>
+
 </html>
