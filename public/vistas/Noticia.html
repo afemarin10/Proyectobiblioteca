@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticia</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/estilos.css" />
+  </head>
+  <body>
+    <header>
+
+        <div class="container">
+            <div class="contenedor">
+                <nav class="nav-main">
+                <img src="https://sibcolombia.net/wp-content/uploads/2016/05/Logo-u-amazonia.png" alt="" />
+                  
+                    <ul class="nav-menu">
+                        <li>
+                            <a href="">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="">Servicios</a>
+                        </li>
+                        <li>
+                            <a href="">Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="">Conctactos</a>
+                        </li>
+                        <li>
+                            <a href="./vistas/Login.html">Iniciar sesión</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="banner text-center">
+                <h1>Biblioteca virtual</h1>
+                <h2>Bienvenidos al modulo de gestion de Noticias</h2>
+                
+            </div>
+
+        </div>
+    </header>
+   
+</nav>
+     
+    <section class="info">
+        <div class="mi-flex row">
+            <div id= "Noticia" class="col">
+
+                <h2>Agregar Noticia</h2>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <input class="d-none" type="text" id="id">
+
+                        <label for="">Titulo Noticia</label>
+                        <input class="form-control" type="text" id="noticia">
+                       
+                            <label for="">Descripcion Noticia</label>
+                            <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                          
+                          
+                            <label for="exampleFormControlFile1">Imagen Noticia</label>
+                            <input type="file" class="form-control-file" id="imagen">                         
+                    </div>                  
+                
+                </div>   
+                <button id="btnAgregar" onclick="agregarNoticia()" class="btn btn-primary">Agregar Noticia</button>
+                <button id="btnActualizar" onclick="actualizarNoticia()" class="btn btn-warning">Actualizar Noticia</button>  
+            </div> 
+                     
+                
+                <div class="col">
+                    <h2>Listado de Noticias</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Titulo</th>
+                                    <th scope="col">Descripcion</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="listaNoticia">    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>          
+
+                
+         
+            <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+            <script src="../js/noticia.js"></script>
+  </body>
+</html>

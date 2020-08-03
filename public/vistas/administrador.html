@@ -1,79 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos.css" />
-</head>
-<body>
-    <h1>Administrador</h1>
-    <div class="contenedor">
-        <nav class="nav-main">
-        
-            <nav class="navbar navbar-light ">
-                <a class="navbar-brand" href="#">
-                    <i class="fab fa-amazon fa-2x"></i>
-                    Biblioteca virtual
-                </a>
-            </nav> 
-            <div> 
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active disabled" tabindex="-1" aria-disabled="true">Usuario</a>
-                    <a href="#" class="list-group-item list-group-item-action ">
-                      Crear usuario
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">Lista de usuario</a>
-                    <a href="#" class="list-group-item list-group-item-action">Lista de administradores</a>
-                    <a href="#" class="list-group-item list-group-item-action">Lista de estudiante</a>
-                    
-                  </div>
-            </div>
-            <div> 
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active disabled" tabindex="-1" aria-disabled="true">Noticia</a>
-                    <a href="#" class="list-group-item list-group-item-action ">
-                      Crear noticia
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">Lista de noticia</a>
-                    <a href="#" class="list-group-item list-group-item-action">Editar noticia</a>
-                    <a href="#" class="list-group-item list-group-item-action">Eliminar noticia</a>
-                    
-                  </div>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
+  </head>
+  <body>
+    <header>
+
+        <div class="container">
+            <div class="contenedor">
+                <nav class="nav-main">
+                <img src="https://sibcolombia.net/wp-content/uploads/2016/05/Logo-u-amazonia.png" alt="" />
+                  
+                    <ul class="nav-menu">
+                        <li>
+                            <a href="">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="">Servicios</a>
+                        </li>
+                        <li>
+                            <a href="">Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="">Conctactos</a>
+                        </li>
+                        <li>
+                            <a href="./vistas/Login.html">Iniciar sesión</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
-        </nav>
-        <section class="info">
-            <div class="mi-flex row">
-                <div class="col">
-    
-                    <h2>Agregar Noticia</h2>
-    
-                    <div class="row mb-3">
-                        <div class="col">
-                            <input class="d-none" type="text" id="id">
-    
-                            <label for="">Nombre</label>
-                            <input class="form-control" type="email" id="name">
-    
-                            <label class="mt-3" for="">Apellidos</label>
-                            <input class="form-control" type="text" id="apellidos">
-    
+            <div class="banner text-center">
+                <h1>Biblioteca virtual</h1>
+                <h2>Bienvenidos al modulo de gestion de Usuarios</h2>
+                
+            </div>
+
+        </div>
+    </header>
+   
+</nav>
+
+
+
+
+    <section class="info">
+        <div class="mi-flex row">
+            <div id= "Noticia" class="col">
+
+                <h2>Agregar Usarios</h2>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <input class="d-none" type="text" id="id">
+
+                        <label for="">Nombre</label>
+                        <input class="form-control" type="text" id="nombre">
+                       
+                            <label for="">Contraseña</label>
+                            <input class="form-control" type="password" id="contraseña">
+
+                            <label for="">Repetir contraseña</label>
+                            <input class="form-control" type="password" id="contraseña2">                          
+                          
                             <label class="mt-3" for="">Rol</label>
-                            <select id="rol" class="form-control" name="" id="">
-                                <option value="Docente">Docente</option>
-                                <option value="Estudiante">Estudiante</option>
-                            </select>
-                        </div>
-                    </div>
-    
-                    <button id="btnAgregar" onclick="" class="btn btn-primary">Agregar Datos</button>
-                    <button id="btnActualizar" onclick="" class="btn btn-warning">Actualizar Datos</button>
-                </div>
+                            <select id="rol" class="form-control" name="" >
+                            <option value="Docente">Administrador</option>
+                            <option value="Estudiante">Estudiante</option>
+                            <option value="Estudiante">Docente</option>
+                        </select>                   
+                    </div>                  
+                
+                </div>   
+                <button id="gregar" onclick="agregarUsuario()" class="btn btn-primary">Agregar Usuario</button>
+                <button id="Actualizar" onclick="actualizarUsuario()" class="btn btn-warning">Actualizar Usuario</button>  
+            </div> 
+                     
+                
                 <div class="col">
                     <h2>Listado de Usuarios</h2>
                     <div class="table-responsive">
@@ -82,31 +101,33 @@
                                 <tr>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Contraseña</th>
-                                    <th>Rol</th>
+                                    <th scope="col">Rol</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
-                            <tbody id="listaUsuario">
-    
+                            <tbody id="listaUsuario">    
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </div>
-        </section>
-    </div>
+                </div>          
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-    <script src="../js/app.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/Admin.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
-</body>
+  </body>
 </html>
