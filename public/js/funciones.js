@@ -10,5 +10,5 @@ function Inciar() {
     sessionStorage["Inicio"]="No";
   }
   location.href = "index.html";
- }
+}
 
