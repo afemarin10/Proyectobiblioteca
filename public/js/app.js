@@ -52,25 +52,25 @@ function RegistroUsuario(user) {
 }
 
 
-function IniciarSesion(){
-    var usuario = document.getElementById("txtusuario1");
-    var contraseña = document.getElementById("txtcontraseña");
-    db.collection("usuarios").get()
-        .then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                if( usuario==doc.data().nombre && contraseña==doc.data().contraseña){                    
-                    location.href = "estudiante.html";
-                }else{
-                    location.href = "administrador.html";
-                }
-            });
-        })
-        .catch(function (error) {
-            console.log("Error: ", error);
-        });
+//function IniciarSesion(){
+//    var usuario = document.getElementById("txtusuario1");
+//    var contraseña = document.getElementById("txtcontraseña");
+  //  db.collection("usuarios").get()
+//    .then((querySnapshot) => {
+//          querySnapshot.forEach((doc) => {
+  //              if( usuario.value==doc.data().nombre && contraseña.value==doc.data().contraseña){                    
+    //                location.href = "estudiante.html";
+ //               }else{
+//                    location.href = "administrador.html";
+//                }
+ //           });
+  //      })
+    //    .catch(function (error) {
+      //      console.log("Error: ", error);
+       // });
 
 
-}
+//}
 
 
 function limpiarDatos() {

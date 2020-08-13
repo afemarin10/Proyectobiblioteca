@@ -175,3 +175,10 @@ button{
 #Noticia{
     padding: 10px;;
 }
+.box{
+    display: flex;
+    color: chartreuse;
+}
+.s{
+    display:flex;
+}
