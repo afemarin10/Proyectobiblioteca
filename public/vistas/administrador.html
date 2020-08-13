@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/estilos.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
 
         <div class="container">
             <div class="contenedor">
                 <nav class="nav-main">
-                <img src="https://sibcolombia.net/wp-content/uploads/2016/05/Logo-u-amazonia.png" alt="" />
-                  
+                    <img src="https://sibcolombia.net/wp-content/uploads/2016/05/Logo-u-amazonia.png" alt="" />
+
                     <ul class="nav-menu">
                         <li>
                             <a href="../index.html">Inicio</a>
@@ -40,8 +34,8 @@
                             <a href="">Contactos</a>
                         </li>
                         <li>
-                            <a  id="mensaje" href="./vistas/Login.html"></a>
-                            
+                            <a id="mensaje" href="./vistas/Login.html"></a>
+
                         </li>
                         <li>
                             <button onclick="cerrar()">Cerrar sesion</button>
@@ -52,23 +46,34 @@
 
             <div class="banner text-center">
                 <h1>Biblioteca virtual</h1>
-                <h2>Bienvenidos al modulo de gestion de Usuarios</h2>
-                
+                <h2>Bienvenido al Modulo de Gestion de Usuarios</h2>
+
             </div>
 
         </div>
     </header>
-   
-</nav>
+
+    </nav>
 
 
 
 
     <section class="info">
         <div class="mi-flex row">
-            <div id= "Noticia" class="col">
+            <div class="row">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active disabled">
+                        Administrador
+                    </a>
+                    <a href="administrador.html" class="list-group-item list-group-item-action">Gestionar usuarios</a>
+                    <a href="noticia.html" class="list-group-item list-group-item-action">Gestionar noticia</a>
+                    <a href="#" class="list-group-item list-group-item-action">Gestionar infomacion</a>
+                    <a href="#" class="list-group-item list-group-item-action ">Gestionar contacto</a>
+                </div>
+            </div>
+            <div id="Noticia" class="container">
 
-                <h2>Agregar Usarios</h2>
+                <h2>Agregar Usuarios</h2>
 
                 <div class="row mb-3">
                     <div class="col">
@@ -76,67 +81,66 @@
 
                         <label for="">Nombre</label>
                         <input class="form-control" type="text" id="nombre">
-                       
-                            <label for="">Contraseña</label>
-                            <input class="form-control" type="password" id="contraseña">
 
-                            <label for="">Repetir contraseña</label>
-                            <input class="form-control" type="password" id="contraseña2">                          
-                          
-                            <label class="mt-3" for="">Rol</label>
-                            <select id="rol" class="form-control" name="" >
+                        <label for="">Contraseña</label>
+                        <input class="form-control" type="password" id="contraseña">
+
+                        <label for="">Repetir contraseña</label>
+                        <input class="form-control" type="password" id="contraseña2">
+
+                        <label class="mt-3" for="">Rol</label>
+                        <select id="rol" class="form-control" name="">
                             <option value="Docente">Administrador</option>
                             <option value="Estudiante">Estudiante</option>
                             <option value="Estudiante">Docente</option>
-                        </select>                   
-                    </div>                  
-                
-                </div>   
-                <button id="gregar" onclick="agregarUsuario()" class="btn btn-primary">Agregar Usuario</button>
-                <button id="Actualizar" onclick="actualizarUsuario()" class="btn btn-warning">Actualizar Usuario</button>  
-            </div> 
-                     
-                
-                <div class="col">
-                    <h2>Listado de Usuarios</h2>
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Contraseña</th>
-                                    <th scope="col">Rol</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody id="listaUsuario">    
-                            </tbody>
-                        </table>
+                        </select>
                     </div>
-                </div>          
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
-    
+                </div>
+                <button id="gregar" onclick="agregarUsuario()" class="btn btn-primary">Agregar Usuario</button>
+                <button id="Actualizar" onclick="actualizarUsuario()" class="btn btn-warning">Actualizar
+                    Usuario</button>
+            </div>
+
+        </div>
+    </section>
+    <div class="container">
+        <div class="col">
+            <h2>Listado de Usuarios</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Contraseña</th>
+                            <th scope="col">Rol</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaUsuario">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
-    
+
     <script src="../js/iniciar.js"></script>
     <script src="../js/localstorage.js"></script>
     <script src="../js/Admin.js"></script>
-    
+
 </body>
+
 </html>
