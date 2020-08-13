@@ -108,7 +108,7 @@ var firebaseConfig = {
         db.collection("informacion").doc(idinfo.value).update({
         mision: mision.value,
         vision: vision.value,
-        objetivos :  objetivos.value  
+        objetivos :  objetivos.value,  
         organigrama :  organigrama.value  
         })
             .then(() => {

@@ -40,6 +40,7 @@ function mostrarinfo() {
             querySnapshot.forEach((doc) => {
                 informacion.innerHTML += `
                 <div class="card">
+               
                 <p>${doc.data().mision}</p>
                 <p>${doc.data().vision}</p>
                 <p>${doc.data().objetivos}</p> 
