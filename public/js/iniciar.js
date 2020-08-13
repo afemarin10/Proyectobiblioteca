@@ -6,10 +6,10 @@ localstorage=window.localStorage;
 function login(){
     if (usuario.value == "admin" && contrasena.value == "admin") {
         localstorage.setItem('user',usuario.value);
-        location.href = "administrador.html";
+        location.href = "../vistas/admi.html";
     }
     else { 
-        location.href = "Login.html";
+        location.href = "../vistas/Login.html";
     }
 }
 function cerrar(){
