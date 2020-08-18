@@ -206,3 +206,13 @@ button{
 .s{
     display:flex;
 }
+.better-social-counter .social-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.better-social-counter.style-style-6 .social-item {
+    width: 25%;
+    float: left;
+}
+.

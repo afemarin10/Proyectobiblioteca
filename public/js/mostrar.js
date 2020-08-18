@@ -44,8 +44,9 @@ function leerDatosinicio() {
                         <h5>${doc.data().titulo}</h5>
                         <div class="texto-noticia" >
                         <p class="des-noti">${doc.data().descripcion}</p>
-                        <a href="#" class="btn btn-success">Ir a noticia</a>
+                        <a href="https://chaira.uniamazonia.edu.co/chaira/View/Public/Biblioteca/OPAC.aspx" class="btn btn-success">Ir a noticia</a>
                         </div>
+                       
                       </div>
                 `;
             });
