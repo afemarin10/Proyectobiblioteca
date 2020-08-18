@@ -17,6 +17,25 @@ body {
     margin: 20px;
 }
 
+.main{
+    display: flex;  
+    
+}
+
+.boton-noticias{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.main p{    
+    text-align: center;
+    text-overflow: Ellipsis; 
+    white-space: nowrap;     
+    overflow: hidden;
+}
+
+
+
 .login {
     
     justify-content: center;

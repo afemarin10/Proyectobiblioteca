@@ -30,31 +30,6 @@ var titulo = document.getElementById('noticia');
 var descripcion = document.getElementById('descripcion');
 var imagen = document.getElementById('imagen');
 
-leerDatosinicio();
-function leerDatosinicio() {
-    listaNoticia.innerHTML = "";
-    
-    db.collection("noticias").get()
-        .then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                listaNoticia.innerHTML += `
-                <div class="card text-center" style="width: 18rem;" >
-                        <img src="${doc.data().imagen}" class="card-img-top" alt="">
-                        <div class="card-body" >
-                        <h5>${doc.data().titulo}</h5>
-                        <div class="texto-noticia" >
-                        <p class="des-noti">${doc.data().descripcion}</p>
-                        <a href="#" class="btn btn-success">Ir a noticia</a>
-                        </div>
-                      </div>
-                `;
-            });
-        })
-        .catch(function (error) {
-            console.log("Error: ", error);
-        });
-}
-
 leerTodaNoticias();
 function leerTodaNoticias() {
     tnoticias.innerHTML = "";
@@ -80,5 +55,3 @@ function leerTodaNoticias() {
             console.log("Error: ", error);
         });
 }
-
-
