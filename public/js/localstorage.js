@@ -5,7 +5,7 @@ function load() {
     if (user) {
         mensaje.innerHTML = "Usuario Logeado : " + "  " + user;
     } else {
-        mensaje.innerHTML = "No Logeado";
+        mensaje.innerHTML = "Iniciar sesion";
     }
 }
 window.onload = load

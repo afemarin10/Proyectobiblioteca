@@ -14,7 +14,7 @@ function login(){
 }
 function cerrar(){
     localStorage.removeItem('user');
-    location.href = "index.html";
+    location.href = "../index.html";
 
 }
 
