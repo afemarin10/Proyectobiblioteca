@@ -41,14 +41,41 @@ function leerTodaNoticias() {
                 <div class="img-noticia" >
                     <img src="${doc.data().imagen}" class="card-img-top" alt="">
                 </div>
-                <div class="til-noticias" >
-                    <h4>${doc.data().titulo}</h4>
+                <div class="til-noticias text-center" >
+                    <h4 >${doc.data().titulo}</h4>
                 </div>
-                 <div class="des-noticia" >
-                        <p class="noti">${doc.data().descripcion}</p>
+                 <div class="des-noticia text-justify" >
+                        <a class="noti">${doc.data().descripcion}</a>
                  </div>   
                 `;
                 
+            });
+        })
+        .catch(function (error) {
+            console.log("Error: ", error);
+        });
+}
+
+
+function leerDatos() {
+    informacion.innerHTML = "";
+    btnActualizarinfo.classList.add('d-none');
+
+    db.collection("informacion").get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                informacion.innerHTML += `
+                    <tr>
+                        <td>${doc.data().mision}</td>
+                        <td>${doc.data().vision}</td>
+                        <td>${doc.data().objetivos}</td>
+                        <td>${doc.data().organigrama}</td>
+                        <td>
+                            <button onclick="eliminar('${doc.id}')" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                            <button onclick="editar('${doc.id}')" class="btn btn-info"><i class="far fa-edit"></i></button>
+                        </td>
+                    </tr>           
+                `;
             });
         })
         .catch(function (error) {

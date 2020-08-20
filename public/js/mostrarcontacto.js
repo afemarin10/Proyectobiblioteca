@@ -40,7 +40,7 @@ function leerDatosinicio() {
                         <h5>${doc.data().titulo}</h5>
                         <div class="texto-noticia" >
                         <p class="des-noti">${doc.data().descripcion}</p>
-                        <a href="https://chaira.uniamazonia.edu.co/chaira/View/Public/Biblioteca/OPAC.aspx" class="btn btn-success">Ir a noticia</a>
+                        <a href="vistas/Noticiaindividual.html" class="btn btn-success">Ir a noticia</a>
                         </div>
                        
                       </div>
@@ -52,6 +52,9 @@ function leerDatosinicio() {
         });
 }
 
+
+
+
 mostrarContacto();
 function mostrarContacto() {
     listaContacto.innerHTML = "";
@@ -60,17 +63,12 @@ function mostrarContacto() {
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 listaContacto.innerHTML += `
-                <section class="container text-center">
-                <p>${doc.data().direccion}</p>
-                <p>${doc.data().telefono}</p>
-                <p>${doc.data().conmutador}</p> 
-                <p>${doc.data().extencion}</p> 
-                <p>${doc.data().jefe}</p> 
-                <p>${doc.data().correojefe}</p> 
-                <p>${doc.data().secre}</p> 
-                <p>${doc.data().correosecre}</p> 
-                </section>
-                  
+                <p class = "texto-footer text-center">${doc.data().direccion}<br>
+                ${doc.data().telefono} ${doc.data().conmutador} ${doc.data().extencion}<br>
+                ${doc.data().jefe} ${doc.data().correojefe}<br>
+                ${doc.data().secre} ${doc.data().correosecre}<br>
+		2020.Todos los derechos reservados
+                </p>                  
                 `;
                 
             });
@@ -78,4 +76,35 @@ function mostrarContacto() {
         .catch(function (error) {
             console.log("Error: ", error);
         });
+}
+function leerunaNoticias(id) {
+    location.href = "../vistas/Noticiaindividual.html"
+    informacionnoticia.innerHTML = "";
+
+  db.collection("noticias")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        if (doc.data().id == id) {
+            informacionnoticia.innerHTML += `
+                <div class="img-noticia" >
+                    <img src="${doc.data().imagen}" class="card-img-top" alt="">
+                </div>
+                <div class="til-noticias" >
+                    <h4>${doc.data().titulo}</h4>
+                </div>
+                 <div class="des-noticia" >
+                        <p class="noti">${doc.data().descripcion}</p>
+                 </div>   
+                `;
+        }
+      });
+    })
+    .catch(function (error) {
+      console.log("Error: ", error);
+    });
+}
+
+function dirigir(){
+    location.href = "vistas/NoticiaIndivual.html"
 }
