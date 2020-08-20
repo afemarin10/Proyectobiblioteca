@@ -173,6 +173,7 @@ li {
     width: 50%;
 
 }
+
 button{
     
     text-decoration: none;
@@ -215,3 +216,10 @@ button{
     width: 25%;
     float: left;
 }
+
+
+.til-noticias{
+    color: green;
+}
+
+
