@@ -52,6 +52,8 @@ function RegistroUsuario(user) {
 }
 
 
+
+
 //function IniciarSesion(){
 //    var usuario = document.getElementById("txtusuario1");
 //    var contraseña = document.getElementById("txtcontraseña");
