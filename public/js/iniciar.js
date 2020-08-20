@@ -4,13 +4,7 @@ var contrasena = document.getElementById('txtcontrasena');
 localstorage=window.localStorage;
 
 function login(){
-    if (usuario.value == "admin" && contrasena.value == "admin") {
-        localstorage.setItem('user',usuario.value);
-        location.href = "../vistas/admi.html";
-    }
-    else { 
-        location.href = "../vistas/Login.html";
-    }
+    location.href = "Login.html"
 }
 function cerrar(){
     localStorage.removeItem('user');

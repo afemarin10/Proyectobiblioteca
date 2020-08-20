@@ -73,32 +73,67 @@
 
             </div>
             <div id="Noticia" class="container">
-                <h2>Agregar Contacto</h2>
+                <h2>Agregar Informacion de Contacto</h2>
                 <div class="row mb-3">
                     <div class="col">
                         <input class="d-none" type="text" id="idcon">
-
                         <label for="">Direccion</label>
-                        <input class="form-control" type="text" id="noticia">
-                        <label for="">Correo electronico</label>
-                        <input class="form-control" type="text" id="noticia">
-
+                        <input class="form-control" type="text" id="txtdire">
                         <label for="">Telefono</label>
-                        <textarea class="form-control" id="descripcion" rows="3"></textarea>
-
-
-                        
+                        <input class="form-control" type="text" id="txttele">
+                        <label for="">Conmutador</label>
+                        <input class="form-control" type="text" id="txtconmu">
+                        <label for="">Extencion</label>
+                        <input class="form-control" type="text" id="txtext">
+                        <label for="">Jefe direccion</label>
+                        <input class="form-control" type="text" id="txtjefe">
+                        <label for="">Correo Jefe direccion</label>
+                        <input class="form-control" type="text" id="txtcorrjefe">
+                        <label for="">Secretaria de la division</label>
+                        <input class="form-control" type="text" id="txtsecre">
+                        <label for="">Correo Secretaria</label>
+                        <input class="form-control" type="text" id="txtcorrsecre">
+  
                     </div>
 
                 </div>
-                <button id="btnAgregarContacto" onclick="" class="btn btn-primary">Agregar Noticia</button>
-                <button id="btnActualizarContacto" onclick="" class="btn btn-warning">Actualizar
-                    Noticia</button>
+                <button id="btnAgregarContacto" onclick="agregarContacto()" class="btn btn-primary">Agregar Contacto</button>
+                <button id="btnActualizarContacto" onclick="actualizarContacto()" class="btn btn-warning">Actualizar
+                    Contacto</button>
 
             </div>
 
         </div>
     </section>
+    <div class="container">
+        <div class="col">
+            <h2>Listado de Contacto</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Direccion</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">Conmutador</th>
+                            <th scope="col">Extencion</th>
+                            <th scope="col">Jefe direccion</th>
+                            <th scope="col">Correo jefe</th>
+                            <th scope="col">Secretaria division</th>
+                            <th scope="col">Correo secretaria</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaContacto">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="../js/iniciar.js"></script>
+    <script src="../js/localstorage.js"></script>
+    <script src="../js/contacto.js"></script>
     
 </body>
 </html>

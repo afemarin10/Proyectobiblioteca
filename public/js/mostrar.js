@@ -112,7 +112,6 @@ function leerunaNoticias(id) {
       console.log("Error: ", error);
     });
 }
-
 function dirigir(){
     location.href = "vistas/NoticiaIndivual.html"
 }
