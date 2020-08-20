@@ -56,30 +56,6 @@ function leerDatosinicio() {
         });
 }
 
-leerTodaNoticias();
-function leerTodaNoticias() {
-    tnoticias.innerHTML = "";
 
-    db.collection("noticias").get()
-        .then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                tnoticias.innerHTML += `
-                <div class="img-noticia" >
-                    <img src="${doc.data().imagen}" class="card-img-top" alt="">
-                </div>
-                <div class="til-noticias" >
-                    <h4>${doc.data().titulo}</h4>
-                </div>
-                 <div class="des-noticia" >
-                        <p class="noti">${doc.data().descripcion}</p>
-                 </div>   
-                `;
-                
-            });
-        })
-        .catch(function (error) {
-            console.log("Error: ", error);
-        });
-}
 
 

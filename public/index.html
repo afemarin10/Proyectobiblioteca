@@ -19,8 +19,8 @@
         <div class="container">
             <div class="contenedor">
                 <nav class="nav-main">
-                <img src="https://sibcolombia.net/wp-content/uploads/2016/05/Logo-u-amazonia.png" alt="" />
-                  
+                    <img src="https://sibcolombia.net/wp-content/uploads/2016/05/Logo-u-amazonia.png" alt="" />
+
                     <!-- <nav class="navbar navbar-light ">
                         <a class="navbar-brand" href="#">
                             <i class="fab fa-amazon fa-2x"></i>
@@ -40,10 +40,18 @@
                         <li>
                             <a href=".vistas/contacto.html">Contactos</a>
                         </li>
-                        
+
                         <li>
-                            <a  id="mensaje" href="./vistas/Login.html">Iniciar sesion</a>
-                            
+                            <div class="">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a id="mensaje" href=""></a>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" onclick="cerrar()">Cerrar sesion</a>
+
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -52,7 +60,7 @@
             <div class="banner text-center">
                 <h1>Biblioteca virtual</h1>
                 <p>Bienvenidos a la biblioteca virtual de la Universidad de la Amazonia</p>
-                
+
             </div>
 
         </div>
@@ -60,7 +68,7 @@
     <section class="info">
         <div class="mi-flex row">
             <div class="col text-center">
-                
+
 
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -105,7 +113,7 @@
                 <div class="col-md-10 text-center">
                     <i class="fas fa-concierge-bell fa-4x"></i>
                     <h2>Ultimas Noticias</h2>
-                    <div class="main" id="listaNoticia"></div>                  
+                    <div class="main" id="listaNoticia"></div>
                 </div>
                 <!--<div class="col-md-4 text-center">
                     <i class="fas fa-concierge-bell fa-4x"></i>
@@ -145,28 +153,31 @@
             </div>
         </div>
         <div class="todas-noticias text-center">
-       <button type="button" class="boton-noticias btn btn-success" onclick="noticias()">Ver todas las Noticias</button>
-    </div>
-    
-    <ul class="social-list bsc -clearfix">
-      
-      <li class="social-item facebook">
-        <a href="https://www.uniamazonia.edu.co/Inicio/" class="item-link" target="_blank">...</a>
-      </li>
-      <li class="social-item twitter">
-        <a href="https://twitter.com/uniamazonia?lang=es" class="item-link" target="_blank">...</a>
-      </li>
-      <li class="social-item Youtube">
-        <a href="https://www.youtube.com/channel/UClo2DqTJEuBE5i4QgIFP2Dw?view_as=subscriber" class="item-link" target="_blank">...</a>
-      </li>
-    </ul>
+            <button type="button" class="boton-noticias btn btn-success" onclick="noticias()">Ver todas las
+                Noticias</button>
+        </div>
+
+        <ul class="social-list bsc -clearfix">
+
+            <li class="social-item facebook">
+                <a href="https://www.uniamazonia.edu.co/Inicio/" class="item-link" target="_blank">...</a>
+            </li>
+            <li class="social-item twitter">
+                <a href="https://twitter.com/uniamazonia?lang=es" class="item-link" target="_blank">...</a>
+            </li>
+            <li class="social-item Youtube">
+                <a href="https://www.youtube.com/channel/UClo2DqTJEuBE5i4QgIFP2Dw?view_as=subscriber" class="item-link"
+                    target="_blank">...</a>
+            </li>
+        </ul>
     </section>
 
 
 
     <footer class="fo">
+        <div id="listaContacto"></div>
         <p class="texto-footer text-center">
-            Dirección:  17 Diagonal 17 con Carrera 3F, Barrio Porvenir Florencia - Caquetá 
+            Dirección: 17 Diagonal 17 con Carrera 3F, Barrio Porvenir Florencia - Caquetá
             Teléfono: (8) 4361556; Conmutador 4366160 Ext. 114 <br>
             Jefe de División: Bibliotecóloga Lilliana Maria Pérez Sierra, l.perez@udla.edu.co <br>
             Secretaria de la División: Elvira Arteaga, e.arteaga@udla.edu.co<br>
@@ -184,17 +195,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-        
-        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
-        
-        
-        <script src="js/iniciar.js"></script>
-        <script src="js/localstorage.js"></script>
-        <script src="js/mostrar.js"></script>
-        
-        
-        
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    
+    
+    <script src="js/mostrar.js"></script>
+    <script src="js/mostrarcontacto.js"></script>
+    <script src="js/iniciar.js"></script>
+    <script src="js/localstorage.js"></script>
+
+
+
+
+
 
 </body>
 
