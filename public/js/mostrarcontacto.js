@@ -21,6 +21,37 @@ var correojefe = document.getElementById('txtcorrjefe');
 var secre = document.getElementById('txtsecre');
 var correosecre = document.getElementById('txtcorrsecre');
 
+var idNoticia = document.getElementById('id');
+var titulo = document.getElementById('noticia');
+var descripcion = document.getElementById('descripcion');
+var imagen = document.getElementById('imagen');
+
+leerDatosinicio();
+function leerDatosinicio() {
+    listaNoticia.innerHTML = "";
+    
+    db.collection("noticias").get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                listaNoticia.innerHTML += `
+                <div class="card text-center" style="width: 18rem;" >
+                        <img src="${doc.data().imagen}" class="card-img-top" alt="">
+                        <div class="card-body" >
+                        <h5>${doc.data().titulo}</h5>
+                        <div class="texto-noticia" >
+                        <p class="des-noti">${doc.data().descripcion}</p>
+                        <a href="https://chaira.uniamazonia.edu.co/chaira/View/Public/Biblioteca/OPAC.aspx" class="btn btn-success">Ir a noticia</a>
+                        </div>
+                       
+                      </div>
+                `;
+            });
+        })
+        .catch(function (error) {
+            console.log("Error: ", error);
+        });
+}
+
 mostrarContacto();
 function mostrarContacto() {
     listaContacto.innerHTML = "";
@@ -29,8 +60,7 @@ function mostrarContacto() {
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 listaContacto.innerHTML += `
-                <section class="">
-               
+                <section class="container text-center">
                 <p>${doc.data().direccion}</p>
                 <p>${doc.data().telefono}</p>
                 <p>${doc.data().conmutador}</p> 
@@ -39,7 +69,6 @@ function mostrarContacto() {
                 <p>${doc.data().correojefe}</p> 
                 <p>${doc.data().secre}</p> 
                 <p>${doc.data().correosecre}</p> 
-
                 </section>
                   
                 `;
