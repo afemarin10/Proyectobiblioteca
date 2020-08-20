@@ -26,19 +26,24 @@
                             <a href="../index.html">Inicio</a>
                         </li>
                         <li>
-                            <a href="">Servicios</a>
+                            <a href="../vistas/admi.html">Servicios</a>
                         </li>
                         <li>
-                            <a href="">Nosotros</a>
+                            <a href="../vistas/mostrarinformacion.html">Nosotros</a>
                         </li>
                         <li>
-                            <a href="">Contactos</a>
+                            <a href="../vistas/mostrarcontacto.html">Contactos</a>
                         </li>
                         <li>
-                            <a id="mensaje" href="./vistas/Login.html"></a>
-                        </li>
-                        <li>
-                            <button onclick="cerrar()">Cerrar sesion</button>
+                            <div class="">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a id="mensaje" href=""></a>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" onclick="cerrar()" >Cerrar sesion</a>
+                                 
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -52,7 +57,7 @@
 
         </div>
     </header>
-    
+
     </nav>
 
     <section class="info">
@@ -60,16 +65,18 @@
             <div class="">
                 <div class="row">
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active disabled">
+                        <a href="admi.html" class="list-group-item list-group-item-action active disabled">
                             Administrador
                         </a>
-                        <a href="administrador.html" class="list-group-item list-group-item-action">Gestionar usuarios</a>
+                        <a href="administrador.html" class="list-group-item list-group-item-action">Gestionar
+                            usuarios</a>
                         <a href="noticia.html" class="list-group-item list-group-item-action">Gestionar noticia</a>
-                        <a href="informacion.html" class="list-group-item list-group-item-action">Gestionar infomacion</a>
+                        <a href="informacion.html" class="list-group-item list-group-item-action">Gestionar
+                            informacion</a>
                         <a href="contacto.html" class="list-group-item list-group-item-action ">Gestionar contacto</a>
                     </div>
                 </div>
-        
+
             </div>
             <div id="Noticia" class="container">
                 <h2>Agregar Noticia</h2>
@@ -80,7 +87,7 @@
                         <label for="">Titulo Noticia</label>
                         <input class="form-control" type="text" id="noticia">
 
-                        <label for="">Descripcion Noticia</label>
+                        <label for="">Telefono</label>
                         <textarea class="form-control" id="descripcion" rows="3"></textarea>
 
 
@@ -94,33 +101,34 @@
                     Noticia</button>
 
             </div>
-            
+
         </div>
     </section>
     <div class="container">
-    <div class="col">
-                <h2>Listado de Noticias</h2>
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col">Titulo</th>
-                                <th scope="col">Descripcion</th>
-                                <th scope="col">Imagen</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody id="listaNoticia">
-                        </tbody>
-                    </table>
-                </div>
+        <div class="col">
+            <h2>Listado de Noticias</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaNoticia">
+                    </tbody>
+                </table>
             </div>
         </div>
+    </div>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
-    <script src="../js/noticia.js"></script>
+    
     <script src="../js/iniciar.js"></script>
     <script src="../js/localstorage.js"></script>
+    <script src="../js/noticia.js"></script>
 </body>
 
 </html>

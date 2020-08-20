@@ -20,23 +20,29 @@
 
                     <ul class="nav-menu">
                         <li>
-                            <a href="">Inicio</a>
+                            <a href="../index.html">Inicio</a>
                         </li>
                         <li>
-                            <a href="">Servicios</a>
+                            <a href="../vistas/admi.html">Servicios</a>
                         </li>
                         <li>
-                            <a href="">Nosotros</a>
+                            <a href="../vistas/mostrarinformacion.html">Nosotros</a>
                         </li>
                         <li>
-                            <a href="">Contactos</a>
+                            <a href="../vistas/mostrarcontacto.html">Contactos</a>
                         </li>
                         <li>
-                            <a id="mensaje" href="./vistas/Login.html"></a>
+                            <div class="">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a id="mensaje" href=""></a>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" onclick="cerrar()" >Cerrar sesion</a>
+                                 
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <button onclick="cerrar()">Cerrar sesion</button>
-                        </li>
+                        
                     </ul>
                 </nav>
             </div>
@@ -57,7 +63,7 @@
             <div class="">
                 <div class="row">
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active disabled">
+                        <a href="admi.html" class="list-group-item list-group-item-action active disabled">
                             Administrador
                         </a>
                         <a href="administrador.html" class="list-group-item list-group-item-action">Gestionar usuarios</a>
@@ -120,9 +126,10 @@
         </div>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
-    <script src="../js/informacion.js"></script>
     <script src="../js/iniciar.js"></script>
     <script src="../js/localstorage.js"></script>
+    <script src="../js/informacion.js"></script>
+
 
 
     

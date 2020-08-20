@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css" />
+</head>
+<body>
+    <header>
+
+        <div class="container">
+            <div class="contenedor">
+                <nav class="nav-main">
+                    <img src="https://sibcolombia.net/wp-content/uploads/2016/05/Logo-u-amazonia.png" alt="" />
+
+                    <ul class="nav-menu">
+                        <li>
+                            <a href="../index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="">Servicios</a>
+                        </li>
+                        <li>
+                            <a href="">Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="">Contactos</a>
+                        </li>
+                        <li>
+                            <a id="mensaje" href="./vistas/Login.html"></a>
+                        </li>
+                        <li>
+                            <button onclick="cerrar()">Cerrar sesion</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="banner text-center">
+                <h1>Biblioteca virtual</h1>
+                <h2>Bienvenido al modulo de Gestion de Contactos</h2>
+
+            </div>
+
+        </div>
+    </header>
+    <section class="info">
+        <div class="mi-flex row">
+            <div class="">
+                <div class="row">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active disabled">
+                            Administrador
+                        </a>
+                        <a href="administrador.html" class="list-group-item list-group-item-action">Gestionar
+                            usuarios</a>
+                        <a href="noticia.html" class="list-group-item list-group-item-action">Gestionar noticia</a>
+                        <a href="informacion.html" class="list-group-item list-group-item-action">Gestionar
+                            infomacion</a>
+                        <a href="contacto.html" class="list-group-item list-group-item-action ">Gestionar contacto</a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="Noticia" class="container">
+                <h2>Agregar Contacto</h2>
+                <div class="row mb-3">
+                    <div class="col">
+                        <input class="d-none" type="text" id="idcon">
+
+                        <label for="">Direccion</label>
+                        <input class="form-control" type="text" id="noticia">
+                        <label for="">Correo electronico</label>
+                        <input class="form-control" type="text" id="noticia">
+
+                        <label for="">Telefono</label>
+                        <textarea class="form-control" id="descripcion" rows="3"></textarea>
+
+
+                        
+                    </div>
+
+                </div>
+                <button id="btnAgregarContacto" onclick="" class="btn btn-primary">Agregar Noticia</button>
+                <button id="btnActualizarContacto" onclick="" class="btn btn-warning">Actualizar
+                    Noticia</button>
+
+            </div>
+
+        </div>
+    </section>
+    
+</body>
+</html>

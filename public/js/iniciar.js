@@ -17,6 +17,11 @@ function cerrar(){
     location.href = "../index.html";
 
 }
+function cerrar1(){
+    localStorage.removeItem('user');
+    location.href = "../index.html";
+
+}
 
 function noticias(){
     location.href = "../vistas/Noticias.html";
