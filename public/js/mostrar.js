@@ -43,7 +43,7 @@ function leerDatosinicio() {
                           doc.data().imagen
                         }" class="card-img-top" alt="">
                         <div class="card-body" >
-                        <h5>${doc.data().titulo}</h5>
+                        <h5>${doc.data().titulo} </h5>
                         <div class="texto-noticia" >
                         <p class="des-noti">${doc.data().descripcion}</p>
                         <button class="btn btn-success" onclick="leerunaNoticias()" >Ir a noticia</button>
@@ -71,10 +71,10 @@ function leerTodaNoticias() {
                     <img src="${doc.data().imagen}" class="card-img-top" alt="">
                 </div>
                 <div class="til-noticias" >
-                    <h4>${doc.data().titulo}</h4>
+                    <h4>${doc.data().descripcion} +${doc.data().titulo}</h4>
                 </div>
                  <div class="des-noticia" >
-                        <p class="noti">${doc.data().descripcion}</p>
+                        <p class="noti"> ${doc.data().titulo} ${doc.data().descripcion}</p>
                  </div>   
                 `;
       });

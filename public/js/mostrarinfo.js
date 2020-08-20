@@ -33,23 +33,33 @@ var db = firebase.firestore();
 
 mostrarinfo();
 function mostrarinfo() {
-    informacion.innerHTML = "";
-
+    informacionorganizacional.innerHTML = "";
     db.collection("informacion").get()
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                informacion.innerHTML += `
-                <div class="card">
-               
-                <p>${doc.data().mision}</p>
-                <p>${doc.data().vision}</p>
-                <p>${doc.data().objetivos}</p> 
-                <p>${doc.data().organigrama}</p> 
-
+                informacionorganizacional.innerHTML += `
+                <div class="til-misi text-center" >
+                <h1 class = "mision">Misión</h1>
                 </div>
-                <br>    
+                <div class="tex-mision text-justify" >
+                <p >${doc.data().mision} </p>
+                </div>
+                <div class="til-visi text-center" >
+                <h1 class = "vision">Visión</h1>
+                </div>
+                <div class="tex-vision text-justify" >
+                <p>${doc.data().vision} </p>
+                </div>
+                <div class="til-obj text-center" >
+                <h1 class = "objetivos">Objetivos</h1>
+                </div>
+                <div class="tex-obj text-justify" >
+                <p>${doc.data().objetivos} </p>
+                </div>
+                <div class="til-orga text-center" >
+                <p>${doc.data().organigrama}</p> 
+                </div>
                 `;
-                
             });
         })
         .catch(function (error) {
